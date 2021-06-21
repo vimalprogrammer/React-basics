@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import MySite1 from './App.js';
+
 /*
 //var add = function()
 let c=12345;
@@ -30,6 +32,7 @@ const ele=<div style={mystyle}>
 </div>
 ReactDOM.render(ele,document.getElementById('root'));
 */
+/*
 function Header()
 {
   return <div>
@@ -54,4 +57,17 @@ function MyWebsite()
 }
 
 ReactDOM.render(<MyWebsite/>,document.getElementById('root'));
+*/
 
+class MySite2 extends React.Component
+{
+  render()
+  {
+    return <div>
+      <MySite1 />
+      <h1>Vimal Vickie Vishnu</h1>
+    </div>
+  }
+}
+
+ReactDOM.render(<MySite2/>,document.getElementById('root'))

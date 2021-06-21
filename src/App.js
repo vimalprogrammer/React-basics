@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          <h1>Welcome VImal </h1>Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class MySite1 extends React.Component
+{
+  render()
+  {
+    return <>
+    <h1>Welcome here buddies</h1>
+    <MySite3/>
+    </>
+  }
 }
 
-export default App;
+class MySite3 extends React.Component
+{
+  render() {
+    return <div>
+      <h3>Basically known as Triple V</h3>
+    </div> 
+  }
+} 
+
+export default MySite1;
+

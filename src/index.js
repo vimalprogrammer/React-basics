@@ -17,6 +17,8 @@ add();
 const ele=React.createElement('h1',{},'Hello Sasi');
 ReactDOM.render(ele,document.getElementById('root'));
 */
+
+/*
 const mystyle={
   textAlign:'center', //css seaparte by comma
   color:'blue',
@@ -27,3 +29,29 @@ const ele=<div style={mystyle}>
   <h2>User</h2>
 </div>
 ReactDOM.render(ele,document.getElementById('root'));
+*/
+function Header()
+{
+  return <div>
+    <h1>This is header</h1>
+  </div>
+}
+function Nav()
+{
+  return <h2>This is Nav bar</h2>
+}
+function Footer()
+{
+  return <h2>This is footer</h2>
+}
+function MyWebsite()
+{
+  return <div>
+    <Header/>
+    <Nav/>
+    <Footer/>
+  </div>
+}
+
+ReactDOM.render(<MyWebsite/>,document.getElementById('root'));
+

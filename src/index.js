@@ -58,7 +58,7 @@ function MyWebsite()
 
 ReactDOM.render(<MyWebsite/>,document.getElementById('root'));
 */
-
+/*
 class MySite2 extends React.Component
 {
   render()
@@ -71,3 +71,28 @@ class MySite2 extends React.Component
 }
 
 ReactDOM.render(<MySite2/>,document.getElementById('root'))
+*/
+
+class PropsEx extends React.Component
+{
+  render()
+  {
+    return <>
+    <h1>Learn React {this.props.topic} in {this.props.let.lang}</h1>
+    </>
+  }
+}
+class PropsEx2 extends React.Component
+{
+  render()
+    {
+      const v= {topic:"Props",lang:"English"}
+      return <PropsEx let={v} />
+    }
+}
+PropsEx.defaultProps={topic:"Props",Lang:"tamil"}
+ReactDOM.render(<PropsEx2/>,document.getElementById('root'))
+
+
+
+

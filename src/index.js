@@ -17,13 +17,11 @@ add();
 const ele=React.createElement('h1',{},'Hello Sasi');
 ReactDOM.render(ele,document.getElementById('root'));
 */
-
 const mystyle={
-  textAlign:'center',
+  textAlign:'center', //css seaparte by comma
   color:'blue',
   opacity:0.9
 }
-
 const ele=<div style={mystyle}>
   <h1 className='header'>Welcome!</h1>
   <h2>User</h2>

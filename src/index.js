@@ -73,6 +73,7 @@ class MySite2 extends React.Component
 ReactDOM.render(<MySite2/>,document.getElementById('root'))
 */
 
+/*
 class PropsEx extends React.Component
 {
   render()
@@ -92,7 +93,30 @@ class PropsEx2 extends React.Component
 }
 PropsEx.defaultProps={topic:"Props",Lang:"tamil"}
 ReactDOM.render(<PropsEx2/>,document.getElementById('root'))
+*/
 
+class A extends React.Component
+{
+  constructor()
+  {
+    super();
+    this.state={initialvalue:"vaanga vasanth",msg:"keela thodunga"}
+  }
 
+  changeValue=()=>
+  {
+    this.setState({initialvalue:"podaa loosu", msg:"Komali"})
+  }
 
+  render()
+  {
+    return <>
+      <h1>{this.state.initialvalue} {this.state.msg}</h1>
+      <br></br>
+      <button type="button" onClick={this.changeValue}>touch</button>
+    
+    </>
+  }
+}
 
+ReactDOM.render(<A/>,document.getElementById('root'))

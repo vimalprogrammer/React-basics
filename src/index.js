@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-
+/*
 //var add = function()
 let c=12345;
 var add=()=>
@@ -12,5 +12,7 @@ var add=()=>
 add();
 //(document.getElementById('root').innerHTML)=c;
 
-
+*/
+const ele=React.createElement('h1',{},'Hello Sasi');
+ReactDOM.render(ele,document.getElementById('root'));
 

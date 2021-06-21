@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//var add = function()
+let c=12345;
+var add=()=>
+  {
+    let a=60,b=10,c=a+b;//let works only inside the block
+    (document.getElementById('root').innerHTML)=c;
+  }
+add();
+//(document.getElementById('root').innerHTML)=c;
+
+
+

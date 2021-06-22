@@ -122,5 +122,54 @@ class A extends React.Component
 ReactDOM.render(<A/>,document.getElementById('root'))
 */
 
+class A extends React.Component
+{
+  constructor()
+  {
+    super();
+    this.state={initialvalue:"Sant's",msg:"best friend is vimal"}
+  }
+  render()
+  {
+    return <>
+      <h1>{this.state.initialvalue} {this.state.msg}</h1>   
+      <button type="button" onClick={this.DeleteValue}>Delete</button>
+       
+    </>
+  }
+  componentWillMount()
+  {
+    alert('Wait 5 secs');
+  }
+  componentDidMount()
+  {
+    setTimeout(() => 
+    {this.setState({initialvalue:"Vimal's",msg:"best friend is sant"})}, 1000);
+  }
+  componentWillUpdate() //alert for every update
+  {
+    alert('Are you need any update')
+  }
+  componentDidUpdate()  //acknowledgement of updation
+  {
+    <h1>Updated Bhaiya</h1>
+  }
+  shouldComponentUpdate() //no update will occur when return false
+  {
+    return true;
+  }
+  DeleteValue=()=>
+  {
+    this.setState({initialvalue:false, msg:false})
+  }
+  componentWillUnmount()
+  {
+    alert("Deleted Succssfully");
+  }
+
+}
+ReactDOM.render(<A/>,document.getElementById('root'))
+
+
 
 

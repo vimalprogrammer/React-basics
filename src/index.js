@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import MySite1 from './App.js';
-
+import './App.css';
 /*
 //var add = function()
 let c=12345;
@@ -121,7 +120,7 @@ class A extends React.Component
 
 ReactDOM.render(<A/>,document.getElementById('root'))
 */
-
+/*
 class EventBind extends React.Component
 {
   constructor()
@@ -144,4 +143,26 @@ class EventBind extends React.Component
   }
 }
 
+
 ReactDOM.render(<EventBind/>,document.getElementById('root'))
+*/
+
+class CSS extends React.Component
+{
+  render()
+  {
+    const mystyle={
+      color:"green",
+      textAlign:"right"
+    };
+    return<>
+    <h1 style={{color:"red"}}>Georgia</h1>
+    <h1 style={mystyle}>Tokyo</h1>
+    <h1 className="App">Nerobi</h1>  
+    <h4>Vaanga Makkaleh</h4>  
+    </>
+  }
+}
+
+ReactDOM.render(<CSS/>,document.getElementById('root'))
+

@@ -147,6 +147,7 @@ class EventBind extends React.Component
 ReactDOM.render(<EventBind/>,document.getElementById('root'))
 */
 
+/*
 class CSS extends React.Component
 {
   render()
@@ -166,3 +167,31 @@ class CSS extends React.Component
 
 ReactDOM.render(<CSS/>,document.getElementById('root'))
 
+*/
+
+class Forms extends React.Component
+{
+  constructor()
+  {
+    super()
+    this.state={username:""}
+  }
+  uservalue=(event)=>
+  {
+    this.setState({username:event.target.value})
+  }
+  render()
+  {
+    return<>
+    <form>
+      <h1>Hello {this.state.username}</h1>
+      Enter your name: <input type="text" onChange={this.uservalue}></input>
+    </form>
+    
+    </>
+  }
+
+
+}
+
+ReactDOM.render(<Forms/>,document.getElementById('root'))

@@ -174,18 +174,37 @@ class Forms extends React.Component
   constructor()
   {
     super()
-    this.state={username:""}
+    this.state={username:"",age:null,errmsg:""}
   }
   uservalue=(event)=>
   {
-    this.setState({username:event.target.value})
+    let n=event.target.name;
+    let v=event.target.value;
+    let err=""
+    if(n==="age" && v!="" && !Number(v))
+    {
+      err=<strong>Input invalid, please enter Number</strong>
+      this.setState({errmsg:err})
+    }
+    else
+      this.setState({[n]:v})
   }
+  formsubmit=(event)=>
+  {
+    event.preventDefault()
+    alert('Application subbmitted')
+  }
+
   render()
   {
     return<>
-    <form>
+    <form onSubmit={this.formsubmit}>
       <h1>Hello {this.state.username}</h1>
-      Enter your name: <input type="text" onChange={this.uservalue}></input>
+      <h1>Your age is {this.state.age}</h1>
+      Enter your name: <input type="text" name="username" onChange={this.uservalue}></input>
+      Enter your age: <input type="text" name="age" onChange={this.uservalue}></input>
+      {this.state.errmsg}
+      <input type="submit" />
     </form>
     
     </>

@@ -215,7 +215,7 @@ class Forms extends React.Component
 
 ReactDOM.render(<Forms/>,document.getElementById('root'))
 */
-
+/*
 const List=(props)=>{
 const myarr=props.myarr;
 const lv=myarr.map((i)=>
@@ -226,6 +226,17 @@ return <ul>{lv}</ul>
 }
 const myarr=[66,7,7,8,54];
 ReactDOM.render(<List myarr={myarr}/>,document.getElementById('root'))
+*/
 
-
-
+const List=(props)=>{
+  const myarr=props.myarr.map((show)=>
+    <div key={show.id}>
+      <h2>{show.id} : {show.name} : {show.AIR}</h2>
+    </div>
+  );
+  return <>
+  {myarr}
+  </>
+  };
+  const myarr=[{id:1,name:"vimal",AIR:2},{id:2,name:"santhosh kumar",AIR:1}];
+  ReactDOM.render(<List myarr={myarr}/>,document.getElementById('root'))

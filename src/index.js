@@ -168,7 +168,7 @@ class CSS extends React.Component
 ReactDOM.render(<CSS/>,document.getElementById('root'))
 
 */
-
+/*
 class Forms extends React.Component
 {
   constructor()
@@ -214,3 +214,18 @@ class Forms extends React.Component
 }
 
 ReactDOM.render(<Forms/>,document.getElementById('root'))
+*/
+
+const List=(props)=>{
+const myarr=props.myarr;
+const lv=myarr.map((i)=>
+{
+  return <li>{i}</li>
+});
+return <ul>{lv}</ul>
+}
+const myarr=[66,7,7,8,54];
+ReactDOM.render(<List myarr={myarr}/>,document.getElementById('root'))
+
+
+

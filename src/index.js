@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState}from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import './App.css';
@@ -228,6 +228,7 @@ const myarr=[66,7,7,8,54];
 ReactDOM.render(<List myarr={myarr}/>,document.getElementById('root'))
 */
 
+/*
 const List=(props)=>{
   const myarr=props.myarr.map((show)=>
     <div key={show.id}>
@@ -240,3 +241,17 @@ const List=(props)=>{
   };
   const myarr=[{id:1,name:"vimal",AIR:2},{id:2,name:"santhosh kumar",AIR:1}];
   ReactDOM.render(<List myarr={myarr}/>,document.getElementById('root'))
+*/
+
+function ReactHooks()
+{
+  const[count,updateCount]=useState(0);
+  return(
+    <>
+    <p>You Clicked <b>{count}</b> times</p>
+    <button onClick={()=>updateCount(count+1)}>Click</button>
+    </>
+  )
+};
+
+ReactDOM.render(<ReactHooks/>,document.getElementById('root'));

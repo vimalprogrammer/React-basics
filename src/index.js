@@ -2,6 +2,14 @@ import React, {useState}from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import './App.css';
+import { BrowserRouter as Router, Route, Link, NavLink, Switch } from 'react-router-dom';
+import Home from './Home';
+import About from './About';
+import Contact from './Contact';
+import Notfound from './Notfound';
+
+
+
 /*
 //var add = function()
 let c=12345;
@@ -243,6 +251,7 @@ const List=(props)=>{
   ReactDOM.render(<List myarr={myarr}/>,document.getElementById('root'))
 */
 
+/*
 function ReactHooks()
 {
   const[count,updateCount]=useState(0);
@@ -255,3 +264,32 @@ function ReactHooks()
 };
 
 ReactDOM.render(<ReactHooks/>,document.getElementById('root'));
+*/
+
+const routing=(
+  <Router>
+    <div>
+      <ul>
+        <li>
+          <NavLink to="/" exact activeStyle={{color:"red"}}>Home</NavLink>
+        </li>
+        <li>
+          <NavLink to="/about" exact activeStyle={{color:"red"}}>About</NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact" exact activeStyle={{color:"red"}}>Contact</NavLink>
+        </li>
+      </ul>
+
+      <h1>React Router example</h1>
+      <Switch>
+      <Route exact path="/" component={Home}/>
+      <Route exact path="/about" component={About}/>
+      <Route exact path="/contact" component={Contact}/>
+      <Route component={Notfound}/>
+      </Switch>
+    </div>
+  </Router>
+
+)
+ReactDOM.render(routing,document.getElementById('root'));
